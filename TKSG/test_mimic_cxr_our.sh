@@ -1,0 +1,29 @@
+python main_test.py \
+    --image_dir /dataset/mimic_cxr-512/images/ \
+    --ann_path /dataset/mimic_cxr-512/annotation.json \
+    --dataset_name mimic_cxr \
+    --max_seq_length 100 \
+    --threshold 10 \
+    --epochs 30 \
+    --step_size 3 \
+    --seed 9153 \
+    --save_dir /results/best_mimic_topic/ \
+    --log_period 1000 \
+    --gamma 0.8 \
+    --num_layers 3 \
+    --cmm_size 2048 \
+    --cmm_dim 512 \
+    --beam_size 3 \
+    --lr_ve 2e-4 \
+    --lr_ed 5e-4 \
+    --device cuda:3 \
+    --batch_size 16 \
+    --model_frame swin_transformer_tiny \
+    --topk 24 \
+    --load /results/best_MIMIC/model_best.pth \
+    --topic \
+    --retrieval \
+    --local_guide \
+    --report_topk 30 \
+    --concept_num 100 \
+    --concept_topk 20
