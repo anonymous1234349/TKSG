@@ -1,0 +1,26 @@
+python main_train.py\
+    --image_dir /dataset/iu_xray-finetune/images/ \
+    --ann_path /dataset/iu_xray-finetune/annotation.json \
+    --dataset_name iu_xray \
+    --max_seq_length 60 \
+    --threshold 3 \
+    --epochs 50 \
+    --step_size 10 \
+    --seed 7580 \
+    --save_dir /results/best_IU/ \
+    --log_period 50 \
+    --device cuda:1 \
+    --batch_size 8 \
+    --lr_ve 2e-4 \
+    --lr_ed 5e-4 \
+    --model_frame swin_transformer_tiny \
+    --clip ViT-B/16 \
+    --topk 24 \
+    --optim Adam \
+    --batch_size 8 \
+    --retrieval \
+    --local_guide \
+    --report_topk 30 \
+    --concept_num 100 \
+    --concept_topk 20 \
+
